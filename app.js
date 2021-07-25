@@ -75,7 +75,8 @@ function handleSaveClick(){
     const image = canvas.toDataURL();
     const link = document.createElement("a");
     link.href = image;
-    link.download = "PaintJS[🖼]";
+    var filename = prompt('파일 이름을 입력하세요', '확장자는 제외하고 입력')
+    link.download = filename;
     link.click();
 }
 
