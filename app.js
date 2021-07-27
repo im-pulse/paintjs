@@ -4,9 +4,9 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
-
 const INITIAL_COLOR = "#2c2c2c";
 const CANVAS_SIZE = 700;
+
 
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
@@ -38,6 +38,13 @@ function onMouseMove(event){
         ctx.lineTo(x, y);
         ctx.stroke();
     }
+}
+
+function handleColorChange(){
+    var filename = prompt('변경하고자 하는 색상코드를 입력하세요', '# + 색상코드 6글자')
+    const color = filename;
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
 }
 
 function handleColorClick(event){
