@@ -40,11 +40,22 @@ function onMouseMove(event){
     }
 }
 
+function ClearCanvas(){
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 function handleColorChange(){
-    var filename = prompt('변경하고자 하는 색상코드를 입력하세요', '# + 색상코드 6글자')
-    const color = filename;
+    
+    var input = prompt('변경하고자 하는 색상코드를 입력하세요', '# + 색상코드 6글자')
+
+    if(!confirm("입력하신 색이 "+input+" 이 맞습니까?"))
+    {}
+    else{
+    const color = input;
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
+    }
 }
 
 function handleColorClick(event){
@@ -83,8 +94,12 @@ function handleSaveClick(){
     const link = document.createElement("a");
     link.href = image;
     var filename = prompt('파일 이름을 입력하세요', '확장자는 제외하고 입력')
+    if(!confirm("파일 이름이 "+filename+" 이 맞습니까?"))
+    {}
+    else{
     link.download = filename;
     link.click();
+    }
 }
 
 if(canvas){
