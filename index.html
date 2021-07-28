@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
-    <title>Paint JS</title>
+    <title>그림판</title>
 </head>
 <body>
     <canvas id="jsCanvas" class="canvas"></canvas>
@@ -17,8 +17,7 @@
         <div class="controls__btns">
             <button id="jsMode">Fill</button>
             <button id="jsSave">Save</button>
-            <button id = "ChangeButton" onclick = handleColorChange();> 임의 색상 지정</button>
- 
+            <button id="jsClear" onclick = ClearCanvas(); >Clear</button>
         </div>
         
         <div class="controls__colors" id="jsColors">
@@ -31,8 +30,7 @@
             <div class="controls__color jsColor" style="background-color: #5ac8fa"></div>
             <div class="controls__color jsColor" style="background-color: #0579ff"></div>
             <div class="controls__color jsColor" style="background-color: #5856d6"></div>
-
-
+            <div class="controls__color jsColor rainbow" onclick = handleColorChange(); ></div>
         </div>
     </div>
     <script src="app.js"></script>
