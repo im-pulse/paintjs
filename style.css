@@ -64,7 +64,9 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
-
+.controls__colors .rainbow {
+  background: linear-gradient(135deg, #ff3b30 20%, #ff9500 30%, #ffcc00 40%, #4cd963 50%, #5ac8fa 65%, #0579ff  80%, #5856d6);
+}
 .controls .controls__range {
   margin-bottom: 30px;
 }
